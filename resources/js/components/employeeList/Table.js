@@ -7,9 +7,7 @@ import CreateModel from './Models/createModel';
 
 class Table extends Component{
 
-    // Get Employee List
-
-    constructor(props){
+      constructor(props){
         super(props);
         this.state={
             emnployees:[],
@@ -22,6 +20,8 @@ class Table extends Component{
         this.getEmployeeList();
     }
 
+    // Get Employee List
+    
     getEmployeeList=()=>{
         let self=this;
         axios.get('/get/employee/list').then(function(response){

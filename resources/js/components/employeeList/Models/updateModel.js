@@ -35,10 +35,6 @@ class UpdateModel extends Component {
             employeeSalary: null
         }
 
-
-        console.log('getDerivedDataFromProps');
-        console.log(props.employeeData);
-
         //Updating Data From Input
 
         if (current_state.employeeName && (current_state.employeeName !== props.employeeData.currentEmployeeName)) {
@@ -48,10 +44,6 @@ class UpdateModel extends Component {
             return null;
         }
 
-        console.log('current_state');
-        console.log(current_state.employeeName);
-        console.log('employeeUpdate')
-        console.log(employeeUpdate);
 
         if (current_state.employeeName !== props.employeeData.currentEmployeeName || current_state.employeeName === props.employeeData.currentEmployeeName) {
             employeeUpdate.employeeName = props.employeeData.currentEmployeeName;
@@ -61,11 +53,11 @@ class UpdateModel extends Component {
             employeeUpdate.employeeSalary = props.employeeData.currentEmployeeSalary;
         }
 
-console.log('return');
-        console.log(employeeUpdate);
         return employeeUpdate;
     }
 
+    //Update Employee Data
+    
     updateEmployeeData = () => {
             axios.post('/update/employee/data',{
                 employeeId:this.props.modelId,

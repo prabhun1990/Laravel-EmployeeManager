@@ -11,6 +11,7 @@ class DeleteModel extends Component {
 
     }
 
+    // Delete Employee Data
     deleteEmployeeData=(employeeId)=>{
         axios.delete('/delete/employee/data/'+employeeId).then(()=>{
             toast.error('Employee Deleted Successfully');

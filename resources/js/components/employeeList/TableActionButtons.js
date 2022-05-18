@@ -17,7 +17,8 @@ class TableActionButtons extends Component {
 
     }
 
-    
+    // Get Employee Details
+
     getEmployeeDetails=(id)=>{
         let self=this;
         axios.post('/get/individual/employee/details',{
@@ -50,7 +51,6 @@ class TableActionButtons extends Component {
                 onClick={()=>{this.getEmployeeDetails(this.props.eachRowId)}}>
                     Update
                 </button>
-
                 <UpdateModel modelId={this.props.eachRowId} employeeData={this.state}/>
 
 
